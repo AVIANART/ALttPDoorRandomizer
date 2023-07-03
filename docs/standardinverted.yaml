@@ -1,5 +1,7 @@
 meta:
   players: 1
+  seed_name: "Standard Inverted"
+  seed_notes: "A Standard start, but the rest of the world is Inverted. Uses Inverted 2.0 changes."
 settings:
   1:
     mode: standard
