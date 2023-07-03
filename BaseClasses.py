@@ -3018,7 +3018,7 @@ class Spoiler(object):
         if self.shops:
             out['Shops'] = self.shops
         out['playthrough'] = self.playthrough
-        out['paths'] = {l:p for (l, p) in self.paths if l not in self.suppress_spoiler_locations}
+        out['paths'] = {l:p for (l, p) in self.paths.items() if l not in self.suppress_spoiler_locations}
         out['Bosses'] = self.bosses
         out['meta'] = self.metadata
 
