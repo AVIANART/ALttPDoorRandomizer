@@ -1,5 +1,7 @@
 meta:
   players: 1
+  seed_name: "Test Name"
+  seed_notes: "Test Notes"
 settings:
   1:
     mode: standard

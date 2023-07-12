@@ -1153,6 +1153,7 @@ OWTileRegions = bidict({
     'Lake Hylia Water D': 0x35,
 
     'Ice Cave Area': 0x37,
+    'Ice Cave Water': 0x37,
 
     'Desert Pass Area': 0x3a,
     'Middle Aged Man': 0x3a,
@@ -1292,6 +1293,7 @@ OWTileRegions = bidict({
     'Ice Palace Area': 0x75,
 
     'Shopping Mall Area': 0x77,
+    'Shopping Mall Water': 0x77,
 
     'Swamp Nook Area': 0x7a,
 
