@@ -26,18 +26,6 @@ def set_rules(world, player):
     if world.swords[player] == 'swordless':
         swordless_rules(world, player)
 
-    ow_bunny_rules(world, player)
-    ow_terrain_rules(world, player)
-
-    if world.mode[player] == 'standard':
-        if not world.is_copied_world:
-            standard_rules(world, player)
-    else:
-        misc_key_rules(world, player)
-
-    bomb_rules(world, player)
-    pot_rules(world, player)
-
     if world.logic[player] == 'noglitches':
         no_glitches_rules(world, player)
     elif world.logic[player] == 'minorglitches':
@@ -54,6 +42,18 @@ def set_rules(world, player):
     else:
         raise NotImplementedError('Not implemented yet')
 
+    ow_bunny_rules(world, player)
+    ow_terrain_rules(world, player)
+
+    if world.mode[player] == 'standard':
+        if not world.is_copied_world:
+            standard_rules(world, player)
+    else:
+        misc_key_rules(world, player)
+
+    bomb_rules(world, player)
+    pot_rules(world, player)
+    
     if world.goal[player] == 'dungeons':
         # require all dungeons to beat ganon
         add_rule(world.get_location('Ganon', player), lambda state: state.can_reach('Master Sword Pedestal', 'Location', player) and state.has_beaten_aga(player) and state.has('Beat Agahnim 2', player) and state.has_crystals(7, player))
