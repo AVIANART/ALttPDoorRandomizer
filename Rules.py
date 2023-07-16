@@ -53,7 +53,7 @@ def set_rules(world, player):
 
     bomb_rules(world, player)
     pot_rules(world, player)
-    
+
     if world.goal[player] == 'dungeons':
         # require all dungeons to beat ganon
         add_rule(world.get_location('Ganon', player), lambda state: state.can_reach('Master Sword Pedestal', 'Location', player) and state.has_beaten_aga(player) and state.has('Beat Agahnim 2', player) and state.has_crystals(7, player))
@@ -989,7 +989,7 @@ def ow_inverted_rules(world, player):
     else:
         set_rule(world.get_entrance('Agahnims Tower', player), lambda state: state.has('Cape', player) or state.has_beam_sword(player))  # barrier gets removed after killing agahnim, rule for that added later
         set_rule(world.get_entrance('GT Approach', player), lambda state: state.has_crystals(world.crystals_needed_for_gt[player], player))
-        set_rule(world.get_entrance('GT Leave', player), lambda state: state.has_crystals(world.crystals_needed_for_gt[player], player) or state.world.shuffle[player] in ('restricted', 'full', 'lite', 'lean', 'crossed', 'insanity'))
+        set_rule(world.get_entrance('GT Leave', player), lambda state: state.has_crystals(world.crystals_needed_for_gt[player], player) or state.world.shuffle[player] in ('restricted', 'full', 'lite', 'lean', 'swapped', 'crossed', 'insanity'))
 
     if world.is_tile_swapped(0x03, player):
         set_rule(world.get_entrance('Spectacle Rock Approach', player), lambda state: world.logic[player] in ['noglitches', 'minorglitches'] and state.has_Pearl(player))

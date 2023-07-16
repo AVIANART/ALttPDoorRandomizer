@@ -91,6 +91,7 @@
     full: 2
     lite: 2
     lean: 2
+    swapped: 2
     crossed: 3
     insanity: 1
   open_pyramid:

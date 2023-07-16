@@ -227,6 +227,8 @@ def main(args, seed=None, fish=None):
         update_world_regions(world, player)
         mark_light_dark_world_regions(world, player)
         create_dynamic_exits(world, player)
+    if args.print_custom_yaml:
+        world.settings.record_overworld(world)
     
     init_districts(world)
 

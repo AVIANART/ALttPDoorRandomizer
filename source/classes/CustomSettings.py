@@ -236,6 +236,14 @@ class CustomSettings(object):
         self.world_rep['settings'] = settings_dict
         for p in self.player_range:
             settings_dict[p] = {}
+            settings_dict[p]['ow_shuffle'] = world.owShuffle[p]
+            settings_dict[p]['ow_terrain'] = world.owTerrain[p]
+            settings_dict[p]['ow_crossed'] = world.owCrossed[p]
+            settings_dict[p]['ow_keepsimilar'] = world.owKeepSimilar[p]
+            settings_dict[p]['ow_mixed'] = world.owMixed[p]
+            settings_dict[p]['ow_whirlpool'] = world.owWhirlpoolShuffle[p]
+            settings_dict[p]['ow_fluteshuffle'] = world.owFluteShuffle[p]
+            settings_dict[p]['bonk_drops'] = world.shuffle_bonk_drops[p]
             settings_dict[p]['shuffle'] = world.shuffle[p]
             settings_dict[p]['door_shuffle'] = world.doorShuffle[p]
             settings_dict[p]['intensity'] = world.intensity[p]
@@ -332,6 +340,15 @@ class CustomSettings(object):
                     placements[location.player][location.name] = f'{location.item.name}#{location.item.player}'
                 else:
                     placements[location.player][location.name] = location.item.name
+
+    def record_overworld(self, world):
+        self.world_rep['ow-tileflips'] = flips = {}
+        for p in self.player_range:
+            if p in world.owswaps and len(world.owswaps[p][0]) > 0:
+                flips[p] = {}
+                flips[p]['force_flip'] = list(f for f in world.owswaps[p][0] if f < 0x40 or f >= 0x80)
+                flips[p]['force_flip'].sort()
+                flips[p]['undefined_chance'] = 0
 
     def record_entrances(self, world):
         self.world_rep['entrances'] = entrances = {}

@@ -383,7 +383,7 @@ boots_clips_local = [ # (name, from_region, to_region)
     
     ('Hyrule Castle To Water Clip', 'Hyrule Castle Area', 'Hyrule Castle Water'), #fake flipper
 
-    ('Bat Cave River Clip Spot', 'Blacksmith Area', 'Blacksmith Ledge'), #cannot guarantee camera correction
+    #('Bat Cave River Clip Spot', 'Blacksmith Area', 'Blacksmith Ledge'), #TODO: This should be added in MG (screenwrap transition)
 
     ('Maze Race Item Get Ledge Clip', 'Maze Race Area', 'Maze Race Prize'),
 
