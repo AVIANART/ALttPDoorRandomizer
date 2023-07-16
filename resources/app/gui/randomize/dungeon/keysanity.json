@@ -2,6 +2,7 @@
   "keysanity": {
     "smallkeyshuffle": {
       "type": "selectbox",
+      "default": "none",
       "options": [
         "none",
         "wild",

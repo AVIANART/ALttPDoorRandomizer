@@ -16,6 +16,7 @@
     },
     "logiclevel": {
       "type": "selectbox",
+      "default": "noglitches",
       "options": [
         "noglitches",
         "minorglitches",
@@ -25,6 +26,7 @@
     },
     "goal": {
       "type": "selectbox",
+      "default": "ganon",
       "options": [
         "ganon",
         "pedestal",
@@ -38,6 +40,7 @@
     },
     "crystals_gt": {
       "type": "selectbox",
+      "default": 7,
       "options": [
         0, 1, 2, 3, 4, 5, 6, 7,
         "random"
@@ -45,6 +48,7 @@
     },
     "crystals_ganon": {
       "type": "selectbox",
+      "default": 7,
       "options": [
         0, 1, 2, 3, 4, 5, 6, 7,
         "random"
@@ -52,6 +56,7 @@
     },
     "weapons": {
       "type": "selectbox",
+      "default": "random",
       "options": [
         "random",
         "assured",
@@ -80,6 +85,7 @@
     },
     "accessibility": {
       "type": "selectbox",
+      "default": "items",
       "options": [
         "items",
         "locations",
@@ -97,6 +103,7 @@
     },
     "itemfunction": {
       "type": "selectbox",
+      "default": "normal",
       "options": [
         "normal",
         "hard",
@@ -105,6 +112,7 @@
     },
     "timer": {
       "type": "selectbox",
+      "default": "none",
       "options": [
         "none",
         "display",
@@ -145,6 +153,7 @@
     },
     "colorizepots": {
       "type": "checkbox",
+      "default": true,
       "config": {
         "padx": [50,0]
       }
@@ -178,6 +187,7 @@
   "rightPoolFrame": {
     "itempool": {
       "type": "selectbox",
+      "default": "normal",
       "options": [
         "normal",
         "hard",
@@ -186,6 +196,7 @@
     },
     "flute_mode": {
       "type": "selectbox",
+      "default": "normal",
       "options": [
         "normal",
         "active"
@@ -193,6 +204,7 @@
     },
     "bow_mode": {
       "type": "selectbox",
+      "default": "progressive",
       "options": [
         "progressive",
         "silvers",
@@ -202,6 +214,7 @@
     },
     "beemizer": {
       "type": "selectbox",
+      "default": "0",
       "options": [
         "0", "1", "2", "3", "4"
       ]
